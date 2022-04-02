@@ -19,14 +19,12 @@ app.use("/restaurants/", RestaurantRouter);
 app.use("/users/", UserRouter);
 app.use("/dishes/", DishRouter);
 
-app.listen(80, function () {
-  console.log("CORS-enabled web server listening on port 80");
-});
 
 app.listen(port,  async() => {
     try{
         await connect();
-        console.log(`Port ${port} is listening..`);
+        console.log(`Port 2557 is listening..`);
+        console.log("CORS-enabled web server listening on port 80")
     }
     catch(err){
         console.log(err.message);
