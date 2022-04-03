@@ -25,7 +25,7 @@ router.post("/", async(req, res) => {
 
 router.get("/:id/", async(req, res) => {
     try{
-        const Users = await User.findById(req.params.id).lean().exec();
+        const Users = await User.findById(req.params.id).populate({path: "cart"}).lean().exec();
         return res.status(200).send(Users);
     }catch(err){
         return res.status(500).send(err.message);

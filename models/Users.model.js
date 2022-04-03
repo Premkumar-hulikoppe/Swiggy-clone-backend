@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema(
     phone_num: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "Dish", required: false, default: []}],
+    cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "Dish", required: false}],
   },
   {
     versionKey: false,
